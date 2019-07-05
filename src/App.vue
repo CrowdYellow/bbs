@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader/>
-    fdsgsdfgsdfgsdfg
+    <mt-spinner type="triple-bounce" color="#26a2ff"></mt-spinner>
     <TheFooter/>
   </div>
 </template>
@@ -19,11 +19,11 @@ export default {
 </script>
 
 <style lang="scss">
-$fa-font-path: "~font-awesome/fonts/";
-@import "~font-awesome/scss/font-awesome";
-@import "../static/css/reset.css";
 html,body,#app{
   width: 100%;
   height: 100%;
 }
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
+@import "../static/css/reset.css";
 </style>
