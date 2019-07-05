@@ -8,4 +8,13 @@ const router =  new Router({
   mode: 'history',
   routes
 });
+// router.beforeEach((to, from, next) => {
+//   const auth = true;
+//   if (to.meta.requireAuth && auth) {
+//     next()
+//   }else {
+//     next()
+//   }
+//   // const app = router.app;
+// });
 export default router
