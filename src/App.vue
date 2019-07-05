@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <p>
+      <i class="fa fa-camera"></i>
+      <i class="fa fa-camera fa-2x"></i>
+      <i class="fa fa-camera fa-3x"></i>
+      <i class="fa fa-camera fa-4x"></i>
+      <i class="fa fa-camera fa-5x"></i>
+      <i class="fa fa-spinner fa-spin"></i>
+    </p>
   </div>
 </template>
 
@@ -11,13 +18,7 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
 </style>
