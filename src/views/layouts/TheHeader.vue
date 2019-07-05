@@ -1,5 +1,5 @@
 <template>
-  <mt-header title="页头">
+  <mt-header title="页头" class="app-header">
   </mt-header>
 </template>
 

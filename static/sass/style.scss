@@ -1,0 +1,40 @@
+@import "variables";
+html,body,#app{
+  width: 100%;
+  height: 100%;
+}
+.app-header{
+  background-color: #06c1ae;
+  height: 3.125rem;
+}
+.app-footer{
+  height: 3.125rem;
+}
+.mint-tabbar > .mint-tab-item.is-selected {
+  background-color:transparent;
+  color: #06c1ae;
+}
+.load{
+  text-align: -webkit-center;
+  color: #06c1ae;
+}
+.mint-searchbar {
+  background-color: #06c1ae;
+}
+.mint-searchbar-cancel {
+  color: #fff;
+}
+.mint-searchbar-core {
+  padding-left: .5rem;
+  font-size: 1rem;
+}
+.mint-search {
+  height: auto;
+}
+.mint-navbar .mint-tab-item.is-selected {
+  border-bottom: 3px solid #06c1ae;
+  color: #06c1ae;
+}
+.mint-tab-item-label {
+  font-size: 1rem;
+}
