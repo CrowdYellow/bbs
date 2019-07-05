@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import TheSearch from './layouts/TheSearch'
-import TheTopNavs from './layouts/TheTopNavs'
+import TheSearch from '@/components/layouts/TheSearch'
+import TheTopNavs from '@/components/layouts/TheTopNavs'
 export default {
   name: "Home",
   components: {
