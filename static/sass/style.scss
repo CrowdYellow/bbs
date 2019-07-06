@@ -8,7 +8,7 @@ html,body,#app{
   height: 3.125rem;
 }
 .app-footer{
-  height: 3.125rem;
+  width: 100% !important;
 }
 .mint-tabbar > .mint-tab-item.is-selected {
   background-color:transparent;

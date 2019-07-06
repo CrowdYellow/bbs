@@ -26,6 +26,6 @@ export default {
 
 <style scoped>
 .app-main{
-  padding-bottom: 3.125rem;
+  padding-bottom: 3.75rem;
 }
 </style>

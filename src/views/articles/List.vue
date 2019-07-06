@@ -1,18 +1,20 @@
 <template>
-  <div class="article-box"
-       v-infinite-scroll="loadMore"
-       infinite-scroll-disabled="loading"
-       infinite-scroll-distance="0">
-    <div class="list"
-    v-for="(item, index) in articles"
-    :key="index">
-      <h3 class="list-title">{{ item.title }}</h3>
-      <div class="user-info">
-        <span class="avatar"><img :src="item.avatar" alt=""></span>
-        <span class="name">{{ item.name }}</span>
-        <span class="introduce">{{ item.introduction }}</span>
+  <div>
+    <div class="article-box"
+         v-infinite-scroll="loadMore"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="0">
+      <div class="list"
+           v-for="(item, index) in articles"
+           :key="index">
+        <h3 class="list-title">{{ item.title }}</h3>
+        <div class="user-info">
+          <span class="avatar"><img :src="item.avatar" alt=""></span>
+          <span class="name">{{ item.name }}</span>
+          <span class="introduce">{{ item.introduction }}</span>
+        </div>
+        <div class="list-excerpt">{{ item.excerpt }}</div>
       </div>
-      <div class="list-excerpt">{{ item.excerpt }}</div>
     </div>
     <div class="tips"><mt-spinner v-show="tips.status" type="fading-circle" color="#06c1ae"></mt-spinner>{{ tips.msg }}</div>
   </div>
@@ -117,10 +119,12 @@ export default {
       overflow: hidden;
     }
   }
-  .tips{
-    width: 100%;
-    text-align: -webkit-center;
-    margin: .5rem;
-  }
+}
+.tips{
+  width: 100%;
+  text-align: -webkit-center;
+  margin-top: .5rem;
+  border-top: 1px solid #eee;
+  padding-top: .5rem;
 }
 </style>
