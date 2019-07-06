@@ -12,22 +12,28 @@ export default {
   data () {
     return {
       active: 'category',
-      navs: [],
+      navs: this.$store.state.category,
     }
   },
-  beforeCreate () {
-    this.$axios.get(this.api.category)
-      .then((response) =>{
-        let data =  response.data.data;
-        for (var i = 0; i < data.length; i++) {
-          this.navs.push(data[i]);
-        }
-        console.log(this.navs);
-      })
-      .catch((error) =>{
-        console.log(error)
-      });
+  methods: {
+    allCategory() {
+      this.$axios.get(this.api.category)
+        .then((response) =>{
+          let data =  response.data.data;
+          let nav = [];
+          for (var i = 0; i < data.length; i++) {
+            nav.push(data[i]);
+          }
+          this.$store.dispatch('getCategoryByApi', nav)
+        })
+        .catch((error) =>{
+          console.log(error)
+        });
+    }
   },
+  mounted() {
+    this.allCategory()
+  }
 }
 </script>
 
