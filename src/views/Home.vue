@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="app-main">
     <TheSearch/>
-    <TheTopNavs/>
     <TheSwipe/>
-    <mt-spinner type="triple-bounce" class="load" color="#06c1ae"></mt-spinner>
+    <TheTopNavs/>
+    <ArticleList/>
+
   </div>
 </template>
 
@@ -11,16 +12,20 @@
 import TheSearch from '@/components/layouts/TheSearch'
 import TheTopNavs from '@/components/layouts/TheTopNavs'
 import TheSwipe from '@/components/layouts/TheSwipe'
+import ArticleList from './articles/List'
 export default {
   name: "Home",
   components: {
     TheSearch,
     TheTopNavs,
     TheSwipe,
+    ArticleList,
   }
 }
 </script>
 
 <style scoped>
-
+.app-main{
+  padding-bottom: 3.125rem;
+}
 </style>
