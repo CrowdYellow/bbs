@@ -45,3 +45,24 @@ html,body,#app{
 .app-main{
   padding-bottom: 3.75rem;
 }
+.ui.divider {
+  margin: 1rem 0;
+  line-height: 1;
+  height: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: rgba(0,0,0,.85);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.ui.divider {
+  text-transform: none;
+}
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-top: 1px solid #d3e0e9;
+  border-bottom: 1px solid rgba(211,224,233,.15);
+}

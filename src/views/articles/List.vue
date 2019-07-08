@@ -50,11 +50,11 @@ export default {
               this.tips.msg = '暂无更多内容';
               return;
             }
-            this.getData = true;
             for (var i=0;i< list.length;i++) {
               this.articles.push(list[i]);
             }
             this.page += 1;
+            this.getData = true;
           })
           .catch((error)=>{
             console.log(error)
