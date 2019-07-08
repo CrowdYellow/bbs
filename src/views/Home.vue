@@ -4,7 +4,6 @@
     <TheSwipe/>
     <TheTopNavs/>
     <ArticleList/>
-
   </div>
 </template>
 
@@ -23,9 +22,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.app-main{
-  padding-bottom: 3.75rem;
-}
-</style>

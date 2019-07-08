@@ -7,7 +7,10 @@
       <div class="list"
            v-for="(item, index) in articles"
            :key="index">
-        <h3 class="list-title">{{ item.title }}</h3>
+        <router-link
+          tag="h3"
+          :to="`/articles/${item.id}/content`"
+          class="list-title">{{ item.title }}</router-link>
         <div class="user-info">
           <span class="avatar"><img :src="item.avatar" alt=""></span>
           <span class="name">{{ item.name }}</span>
@@ -31,27 +34,32 @@ export default {
         status: true,
         msg: '努力加载中...'
       },
+      getData: true,
     }
   },
   methods: {
     getArticles(page) {
-      this.$axios.get(this.api.articles+'?page='+page)
-        .then((response)=>{
-          let list = response.data.data;
-          if (list.length === 0) {
-            this.loading = false;
-            this.tips.status = false;
-            this.tips.msg = '暂无更多内容';
-            return;
-          }
-          for (var i=0;i< list.length;i++) {
-            this.articles.push(list[i]);
-          }
-          this.page += 1;
-        })
-        .catch((error)=>{
-          console.log(error)
-        });
+      if (this.getData) {
+        this.getData = false;
+        this.$axios.get(this.api.articles+'?page='+page)
+          .then((response)=>{
+            let list = response.data.data;
+            if (list.length === 0) {
+              this.loading = false;
+              this.tips.status = false;
+              this.tips.msg = '暂无更多内容';
+              return;
+            }
+            this.getData = true;
+            for (var i=0;i< list.length;i++) {
+              this.articles.push(list[i]);
+            }
+            this.page += 1;
+          })
+          .catch((error)=>{
+            console.log(error)
+          });
+      }
     },
     loadMore() {
       this.loading = true;
